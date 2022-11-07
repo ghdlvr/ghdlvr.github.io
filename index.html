@@ -1,8 +1,19 @@
 <!DOCTYPE html>
+
 <head>
     <title>GHDlvr</title>
+    <script>
+        document.getElementById('ghlink').onchange = (e) => {
+            document.getElementById('output').innerText =
+                `https://ghdlvr.github.io/${document.getElementById('ghlink'.innerText)}`
+        }
+    </script>
 </head>
 
 <body>
-    <h1>GHDlvr</h1>
+    <h1>GHDlvr - the new CDN for GitHub Repos</h1>
+    <form>
+        <input placeholder="Enter GitHub file link" id="ghlink">
+        <input disabled placeholder="GHDlvr link output here" id="output">
+    </form>
 </body>
