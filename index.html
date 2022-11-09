@@ -13,7 +13,7 @@
     <script>
         document.getElementById('ghlink').onchange = (e) => {
             document.getElementById('output').value =
-                `https://ghdlvr.github.io?f=${new URL(document.getElementById('ghlink').value).pathname}`
+                `https://ghdlvr.github.io?${new URL(document.getElementById('ghlink').value).pathname}`
         }
     </script>
 </body>
