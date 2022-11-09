@@ -1,1 +1,19 @@
-<head><meta http-equiv="content-type" content="text/javascript; charset=UTF-8"></head><body></body><script src="https://cdn.jsdelivr.net/gh/Luidenka/ghdlvr@0.77.5/ghdlvr.js"></script>
+<!DOCTYPE html>
+    
+<head>
+	<title>GHDlvr</title>
+</head>
+
+<body>
+	<h1>GHDlvr - the new CDN for GitHub Repos</h1>
+	<form>
+        <input placeholder="Enter GitHub file link" id="ghlink">
+        <input disabled placeholder="GHDlvr link output here" id="output">
+    </form>
+    <script>
+        document.getElementById('ghlink').onchange = (e) => {
+            document.getElementById('output').value =
+                `https://ghdlvr.github.io?f=${new URL(document.getElementById('ghlink').value).pathname}`
+        }
+    </script>
+</body>
